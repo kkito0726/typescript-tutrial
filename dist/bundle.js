@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/counter.ts":
+/*!************************!*\
+  !*** ./src/counter.ts ***!
+  \************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nclass Counter {\n    constructor(count) {\n        this.count = count;\n    }\n    setCount(elem) {\n        if (elem) {\n            elem.innerHTML = this.count.toString();\n        }\n    }\n    handleAdd() {\n        this.count += 1;\n        console.log(this.count);\n    }\n    handleSubtract() {\n        this.count -= 1;\n    }\n}\nexports[\"default\"] = Counter;\n\n\n//# sourceURL=webpack://typescript-tutrial/./src/counter.ts?");
+
+/***/ }),
+
 /***/ "./src/index.ts":
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst saySomething_1 = __importDefault(__webpack_require__(/*! ./saySomething */ \"./src/saySomething.ts\"));\nconst root = document.getElementById(\"root\");\nconst saySomething = new saySomething_1.default(\"Hello Typescript\");\nsaySomething.sayText(root);\n\n\n//# sourceURL=webpack://typescript-tutrial/./src/index.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst saySomething_1 = __importDefault(__webpack_require__(/*! ./saySomething */ \"./src/saySomething.ts\"));\nconst counter_1 = __importDefault(__webpack_require__(/*! ./counter */ \"./src/counter.ts\"));\nconst root = document.getElementById(\"root\");\nconst saySomething = new saySomething_1.default(\"Hello Typescript\");\nsaySomething.sayText(root);\nconst counter = new counter_1.default(0);\nconst count = document.getElementById(\"count\");\nconst addButton = document.getElementById(\"add\");\naddButton === null || addButton === void 0 ? void 0 : addButton.addEventListener(\"click\", () => {\n    counter.handleAdd();\n    counter.setCount(count);\n});\nconst subtractButton = document.getElementById(\"subtract\");\nsubtractButton === null || subtractButton === void 0 ? void 0 : subtractButton.addEventListener(\"click\", () => {\n    counter.handleSubtract();\n    counter.setCount(count);\n});\n\n\n//# sourceURL=webpack://typescript-tutrial/./src/index.ts?");
 
 /***/ }),
 
